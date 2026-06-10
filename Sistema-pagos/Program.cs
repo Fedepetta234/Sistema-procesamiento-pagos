@@ -1,5 +1,10 @@
 ﻿class Program
 {
+    static List<Efectivo> efectivos = new List<Efectivo>();
+    static List<Transferencia> transferencias = new List<Transferencia>();
+    static List<Tarjeta> tarjetas = new List<Tarjeta>();
+
+
     static void Main()
     {
         int op;
@@ -27,4 +32,6 @@
             }
         }while (op != 0);
     }
+
+
 }
