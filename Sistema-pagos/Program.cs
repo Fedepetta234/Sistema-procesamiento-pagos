@@ -15,7 +15,7 @@
             Console.WriteLine("2. Mostrar datos");
             Console.WriteLine("0. Salir");
             Console.Write("Seleccione una opción: ");
-            op = int.Parse(Console.ReadLine());
+            op = int.Parse(Console.ReadLine() ?? "0");
 
             switch (op)
             {
@@ -33,6 +33,39 @@
         }while (op != 0);
     }
 
+    static void CargarTitular()
+    {
+        Console.Write("Ingresar Titular: ");
+        string nombre = Console.ReadLine() ?? "";
 
+        Console.Write("Ingrese el monto original :");
+        double monto = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Seleccione el tipo de pago:");
+        Console.WriteLine("1. Efectivo");
+        Console.WriteLine("2. Transferencia");
+        Console.WriteLine("3. Tarjeta");
+        int tipoPago = int.Parse(Console.ReadLine());
+        
+        switch (tipoPago){
+            case 1:
+                MetodoEfectivo();
+                break;
+            case 2:
+                MetodoTransferencia();
+                break;
+            case 3:
+                MetodoTarjeta();
+                break;
+             default:
+                    Console.WriteLine("Opción no válida. Intente nuevamente.");
+                    break;
+        }
+    }
+
+    static void Efectivo()
+    {
+        
+    }
 }
 

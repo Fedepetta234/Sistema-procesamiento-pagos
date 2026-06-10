@@ -1,4 +1,4 @@
-abstract public class Efectivo : Pago
+public class Efectivo : Pago
 {
     public Efectivo(string titular, double montoOriginal) : base(titular, montoOriginal)
     {
