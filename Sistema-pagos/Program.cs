@@ -1,4 +1,4 @@
-﻿class Program
+class Program
 {
     static void Main()
     {
@@ -26,5 +26,10 @@
                     break;
             }
         }while (op != 0);
+    }
+
+    static void ProcesarPago()
+    {
+        
     }
 }
