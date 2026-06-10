@@ -1,12 +1,13 @@
 public class Tarjeta : Pago
 {
-    public Tarjeta(string titular, double montoOriginal) : base(titular, montoOriginal)
+    public Tarjeta(string titular, double montoOriginal, double montoTotal) : base(titular, montoOriginal, montoTotal)
     {
     }
 
     public override void CostoAdicionales()
     {
         double comision = MontoOriginal * 0.02;
-        MontoOriginal += comision;
+        
+        MontoTotal = MontoOriginal + comision;
     }
 }

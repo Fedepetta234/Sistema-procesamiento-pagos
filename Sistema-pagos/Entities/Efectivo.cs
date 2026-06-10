@@ -1,12 +1,12 @@
 public class Efectivo : Pago
 {
-    public Efectivo(string titular, double montoOriginal) : base(titular, montoOriginal)
+    public Efectivo(string titular, double montoOriginal, double montoTotal) : base(titular, montoOriginal, montoTotal)
     {
     }
 
     public override void CostoAdicionales()
     {
         double comision = MontoOriginal;
-        MontoOriginal = comision;
+        MontoTotal = MontoOriginal;
     }
 }
